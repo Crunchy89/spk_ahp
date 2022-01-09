@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 09, 2022 at 08:06 AM
+-- Generation Time: Jan 09, 2022 at 08:22 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -77,10 +77,14 @@ CREATE TABLE `akses_menu` (
 --
 
 INSERT INTO `akses_menu` (`id`, `menu_id`, `role_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2022-01-03 16:06:54', '2022-01-03 16:06:54'),
 (3, 7, 1, '2022-01-05 21:44:34', '2022-01-05 21:44:34'),
 (4, 1, 3, '2022-01-05 21:44:38', '2022-01-05 21:44:38'),
-(5, 7, 3, '2022-01-05 21:44:39', '2022-01-05 21:44:39');
+(5, 7, 3, '2022-01-05 21:44:39', '2022-01-05 21:44:39'),
+(6, 14, 3, '2022-01-08 23:14:38', '2022-01-08 23:14:38'),
+(7, 17, 3, '2022-01-08 23:14:39', '2022-01-08 23:14:39'),
+(8, 14, 1, '2022-01-08 23:14:43', '2022-01-08 23:14:43'),
+(9, 17, 1, '2022-01-08 23:14:43', '2022-01-08 23:14:43'),
+(10, 1, 1, '2022-01-08 23:14:55', '2022-01-08 23:14:55');
 
 -- --------------------------------------------------------
 
@@ -180,7 +184,11 @@ INSERT INTO `menu` (`id`, `title`, `link`, `icon`, `urutan`, `id_parent`, `creat
 (10, 'Alternatif', 'alternatif', NULL, 2, 7, '2022-01-05 21:56:27', '2022-01-05 22:06:47'),
 (11, 'Perhitungan AHP', 'ahp', NULL, 3, 7, '2022-01-05 23:21:13', '2022-01-05 23:21:13'),
 (12, 'Nilai Alternatif', 'nilai', NULL, 4, 7, '2022-01-07 13:21:30', '2022-01-07 13:21:30'),
-(13, 'Perangkingan', 'rangking', NULL, 5, 7, '2022-01-08 18:52:28', '2022-01-08 18:52:28');
+(13, 'Perangkingan', 'rangking', NULL, 5, 7, '2022-01-08 18:52:28', '2022-01-08 18:52:28'),
+(14, 'Informasi Aplikasi', NULL, 'fas fa-home', 3, 0, '2022-01-08 23:11:47', '2022-01-08 23:11:47'),
+(15, 'User Manual', 'manual', NULL, 1, 14, '2022-01-08 23:12:05', '2022-01-08 23:12:05'),
+(16, 'Profil Aplikasi', 'profil', NULL, 2, 14, '2022-01-08 23:12:20', '2022-01-08 23:12:20'),
+(17, 'Cetak Laporan', 'cetak', 'fas fa-print', 4, 0, '2022-01-08 23:12:48', '2022-01-08 23:12:48');
 
 -- --------------------------------------------------------
 
@@ -418,7 +426,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `role_id`, `username`, `password`, `is_active`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin', '$2y$10$9NHsZ3V19dymlh4eUM.c5OJAYym73Tmrh68AGu5ouLP5.7VSBzOLW', 1, NULL, '2022-01-03 16:06:54', '2022-01-03 16:06:54');
+(1, 1, 'Admin', '$2y$10$9NHsZ3V19dymlh4eUM.c5OJAYym73Tmrh68AGu5ouLP5.7VSBzOLW', 1, NULL, '2022-01-03 16:06:54', '2022-01-03 16:06:54'),
+(3, 3, 'Developer', '$2y$10$AlqDDKSr6oBdk2O5uQEzSuPOmz.G/yXvPZpE/27GBPBWJM9/VZ1Si', 1, NULL, '2022-01-08 23:15:24', '2022-01-08 23:15:24');
 
 --
 -- Indexes for dumped tables
@@ -526,7 +535,7 @@ ALTER TABLE `ahp`
 -- AUTO_INCREMENT for table `akses_menu`
 --
 ALTER TABLE `akses_menu`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `alternatif`
@@ -550,7 +559,7 @@ ALTER TABLE `kriteria`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -586,7 +595,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

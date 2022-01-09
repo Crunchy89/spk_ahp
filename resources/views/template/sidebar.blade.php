@@ -67,7 +67,7 @@
 
                 @else
                 <li class="nav-item">
-                    <a href="{{ url("$m->url") }}" class="nav-link">
+                    <a href="{{ route($m->link) }}" class="nav-link">
                         <i class="nav-icon fas {{$m->icon}}"></i>
                         <p>
                             {{$m->title}}

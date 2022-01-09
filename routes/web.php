@@ -61,4 +61,13 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::prefix('rangking')->group(function () {
         Route::get('/', [\App\Http\Controllers\RangkingController::class, 'index'])->name('rangking');
     });
+    Route::prefix('manual')->group(function () {
+        Route::get('/', [\App\Http\Controllers\ManualController::class, 'index'])->name('manual');
+    });
+    Route::prefix('profil')->group(function () {
+        Route::get('/', [\App\Http\Controllers\ProfilController::class, 'index'])->name('profil');
+    });
+    Route::prefix('cetak')->group(function () {
+        Route::get('/', [\App\Http\Controllers\ProfilController::class, 'index'])->name('cetak');
+    });
 });
