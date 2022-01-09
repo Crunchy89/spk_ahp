@@ -70,6 +70,7 @@
                         <tr>
                             <th>Alternatif</th>
                             <th>Nilai</th>
+                            <th>Persentase</th>
                             <th>Rangking</th>
                         </tr>
                     </thead>
@@ -81,6 +82,7 @@
                         <tr>
                             <td>{{ $key }}</td>
                             <td>{{ $value }}</td>
+                            <td>{{ round($value*100,4) }}%</td>
                             <td>{{ $i++ }}</td>
                         </tr>
                         @endforeach

@@ -268,7 +268,7 @@
                         <tbody>
                             @php
                                 $total = round(round(array_sum($konsistensi),2) / count($kriteria),3);
-                                $ci = round(($total-count($kriteria))/3,3);
+                                $ci = round(($total-count($kriteria))/(count($kriteria)-1),3);
                                 $cr = round($ci/$ir,4)
                             @endphp
                             <td>{{ $total }}</td>
