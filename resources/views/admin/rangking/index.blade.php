@@ -82,7 +82,7 @@
                         <tr>
                             <td>{{ $key }}</td>
                             <td>{{ $value }}</td>
-                            <td>{{ round($value*100,4) }}%</td>
+                            <td>{{ round(($value*100)/array_sum($sortRangking),4) }}%</td>
                             <td>{{ $i++ }}</td>
                         </tr>
                         @endforeach
