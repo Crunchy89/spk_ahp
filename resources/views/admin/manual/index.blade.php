@@ -72,10 +72,10 @@
                         </ol>
                     </li>
                     <li>
-                        <a href="cetak">Cetak Laporan</a>
+                        <a href="#cetak">Cetak Laporan</a>
                     </li>
                     <li>
-                        <a href="logout">Logout</a>
+                        <a href="#logout">Logout</a>
                     </li>
                 </ul>
                 <section id="dashboard">
