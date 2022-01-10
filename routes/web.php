@@ -72,3 +72,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/cetak', [\App\Http\Controllers\CetakController::class, 'cetak'])->name('cetak.print');
     });
 });
+Route::prefix('cetak')->group(function () {
+    Route::get('/umum', [\App\Http\Controllers\CetakController::class, 'umum'])->name('cetak.umum');
+});

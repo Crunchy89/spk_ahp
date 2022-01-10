@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <button type="submit" class="btn btn-success">Login</button>
-                                        <a href="" class="nav-link">Masuk sebagai tamu</a>
+                                        <a href="{{ route('cetak.umum') }}" class="nav-link">Masuk sebagai tamu</a>
                                     </div>
                                 </form>
                             </div>

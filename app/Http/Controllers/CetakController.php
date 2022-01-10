@@ -95,4 +95,17 @@ class CetakController extends Controller
         ];
         return view('admin.cetak.cetak', $data);
     }
+    public function umum()
+    {
+        $data = [
+            'title' => 'print',
+            'kriteria' => Kriteria::all(),
+            'alternatif' => Alternatif::all(),
+            'data' => $this->concat(),
+            'nilai' => $this->nilai(),
+            'rangking' => $this->rangking(),
+            'sortRangking' => $this->sortRangking()
+        ];
+        return view('admin.cetak.umum', $data);
+    }
 }
