@@ -1,26 +1,12 @@
-@extends('template.admin')
+@extends('template.template')
 @section('title',$title)
-@section('content')
-<div class="content-header">
-    <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1 class="m-0">Cetak</h1>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
-                    <li class="breadcrumb-item active">Cetak</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</div>
+@section('body')
+<body>
+<h3 class="text-center">Hasil Perhitungan Pemilihan Lokasi Pembangunan Perumahan Metode AHP</h3>
+<hr>
+
 <section class="content">
     <div class="container-fluid">
-        <div class="form-group mt-3 mb-3">
-            <a href="{{ route('cetak.print') }}" class="btn btn-success"><i class="fas fa-print"></i> Cetak</a>
-        </div>
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6 h-100">
                 <div class="card">
@@ -156,5 +142,15 @@
 
     </div>
 </section>
+
+
+
+
+
 @endsection
 
+@section('script')
+<script>
+    window.print()
+</script>
+@endsection

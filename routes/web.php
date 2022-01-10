@@ -69,5 +69,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     });
     Route::prefix('cetak')->group(function () {
         Route::get('/', [\App\Http\Controllers\CetakController::class, 'index'])->name('cetak');
+        Route::get('/cetak', [\App\Http\Controllers\CetakController::class, 'cetak'])->name('cetak.print');
     });
 });
