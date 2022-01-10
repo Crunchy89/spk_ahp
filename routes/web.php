@@ -68,6 +68,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/', [\App\Http\Controllers\ProfilController::class, 'index'])->name('profil');
     });
     Route::prefix('cetak')->group(function () {
-        Route::get('/', [\App\Http\Controllers\ProfilController::class, 'index'])->name('cetak');
+        Route::get('/', [\App\Http\Controllers\CetakController::class, 'index'])->name('cetak');
     });
 });

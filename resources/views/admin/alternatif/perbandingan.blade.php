@@ -21,7 +21,6 @@
 <section class="content">
     <div class="container-fluid">
         <a href="{{ route('nilai') }}" class="btn btn-info mb-3"><i class="fas fa-arrow-left"></i> Kembali</a>
-
         <div class="card">
             <div class="card-body">
                 <h3>Data Inputan</h3>

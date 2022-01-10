@@ -21,6 +21,8 @@
 
         <div class="card">
             <div class="card-body">
+                <h3>Hasil perhitungan</h3>
+                <hr>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -33,8 +35,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <h3>Hasil perhitungan</h3>
-                            <hr>
                             <tr>
                                 <td>Bobot P</td>
                                 @foreach ($kriteria as $k)
